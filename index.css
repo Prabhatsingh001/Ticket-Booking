@@ -200,6 +200,12 @@ h2 {
   text-align: center;
 }
 
+/* General styling for the container */
+.bus {
+  padding: 20px;
+  text-align: center;
+}
+
 .bus h2 {
   margin-bottom: 30px;
   color: #333;
