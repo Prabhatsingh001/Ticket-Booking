@@ -9,10 +9,23 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="footer.css">
+<link rel="stylesheet" href="footer.css">
+ 
 <!-- this is for twitter icons -->
 <script src="https://kit.fontawesome.com/3d20c433e1.js" crossorigin="anonymous"></script>
   <style>
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
     
     /* code for bottom to top nav  */
     
@@ -198,6 +211,162 @@
             border-radius: 10px;
         }
         /* chatbot css end */
+        /* Container styling */
+ 
+        .navbarr11 {
+    width: 100%;
+    background-color: #2d2d2d;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.navbar12 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #00ffd5;
+    font-weight: 500;
+    margin-right: 200px;
+    font-size: 20px;
+}
+
+.navbar12 img {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    margin-right: 15px;
+}
+
+.navbar12 div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar12 a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar12 a:hover {
+    color: #00ffd5;
+}
+
+.navbar12 i {
+    font-size: 16px;
+}
+
+#darkModeToggle {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#darkModeToggle:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo {
+        margin-right: 100px;
+    }
+    
+    .navbar12 div {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar12 {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-right: 50px;
+    }
+    
+    .navbar12 div {
+        gap: 10px;
+    }
+}
+          
+/* Add these styles to your existing CSS */
+
+/* Default light mode styles */
+.sell-ticket label {
+    color: #000;
+}
+
+.sell-ticket input,
+.sell-ticket select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Dark mode styles */
+body.dark-mode .sell-ticket label {
+    color: #fff;  /* Makes labels visible in dark mode */
+}
+
+body.dark-mode .sell-ticket input,
+body.dark-mode .sell-ticket select {
+    background-color: #333;  /* Darker background for inputs */
+    color: #fff;  /* Light text color */
+    border: 1px solid #555;
+}
+
+body.dark-mode .sell-ticket input::placeholder {
+    color: #aaa;  /* Lighter placeholder text */
+}
+
+/* If you want to style the form section background in dark mode */
+body.dark-mode .sell-ticket {
+    background-color: #1a1a1a;  /* Dark background */
+    color: #fff;  /* Light text */
+}
+
+/* Style for the form heading in dark mode */
+body.dark-mode .sell-ticket h1 {
+    color: #fff;
+}
+
+/* Focus states for better visibility in dark mode */
+body.dark-mode .sell-ticket input:focus,
+body.dark-mode .sell-ticket select:focus {
+    border-color: #00ffd5;  /* Matches your theme color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 213, 0.3);
+}
+
+
+
+
+
       </style>
 </head>
 
@@ -215,20 +384,56 @@
     <button class="chatbot-button" id="chatbot-button"><i class="fa-brands fa-telegram"></i></button>
   </div>
 
-  <!-- Navbar -->
+  <!-- cursor -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+
   <nav class="navbar">
 
-    <div class="logo"><img src="images/4.jpeg" alt="Ticket Booking Logo" class="logo-image"> Ticket Marketplace</div>
+     
 
 
-    <ul class="nav-links">
-      <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-      <li><a href="bus_sell.html"><i class="fas fa-tag"></i>Sell Bus Ticket</a></li>
-      <li><a href="train_sell.html"><i class="fas fa-tag"></i>Sell Train Ticket</a></li>
-      <li><a href="buy.html"><i class="fas fa-shopping-cart"></i>Buy Ticket</a></li>
-      <button id="darkModeToggle" style="width: 40px; height: 40px;">🌙</button>
-    </ul>
-  </nav>
+   <div class="navbarr11">
+    <nav class="navbar12">
+      <img src="https://ticket-booking-blue.vercel.app/images/4.jpeg" alt="" style="border-radius: 50%; height: 35px; width: 35px;">
+       <a href="index.html" style="text-decoration: none;">
+        <div class="logo" style="margin-right: 200px; font-size: 20px;">Ticket Marketplace</div>
+       </a>
+      <div>
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+          <a href="buy.html"><i class="fas fa-ticket-alt"></i> Buy Ticket</a>
+          <a href="sell.html"><i class="fas fa-tags"></i> Sell</a>
+          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          <a href="contributor.html"><i class="fas fa-users"></i> Contributors</a>
+          <a href="register.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+  
+        </div>
+        <button id="darkModeToggle" style="width: 40px; height: 40px;">🌙</button>
+  
+    </nav>
+   </div>
+    
+       
 
   <!-- Sell Train Ticket Form -->
   <section class="sell-ticket">
@@ -368,10 +573,78 @@
 
 
 <!-- footer end  -->
+   <script>
+        // cursor 
 
-<script src="app.js"> </script>
+        const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
 
-<script>
+const colors = [
+
+"#BCE954",
+"#98FF98",
+"#9CB071",
+"#90C209",
+"#B2C248",
+"#85BB65",
+"#99C68E",
+"#6CBB3C",
+"#3ea055",
+"#41a317",
+"#4AA02C",
+"#6AA121",
+"#347C2C",
+"#387C44",
+"#437C17",
+"#306754",
+"#254117",
+"#667C26",
+"#728C00",
+"#008000"
+
+];
+
+circles.forEach(function (circle, index) {
+circle.x = 0;
+circle.y = 0;
+circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+coords.x = e.clientX;
+coords.y = e.clientY;
+
+});
+
+function animateCircles() {
+
+let x = coords.x;
+let y = coords.y;
+
+circles.forEach(function (circle, index) {
+  circle.style.left = x - 12 + "px";
+  circle.style.top = y - 12 + "px";
+  
+  circle.style.scale = (circles.length - index) / circles.length;
+  
+  circle.x = x;
+  circle.y = y;
+
+  const nextCircle = circles[index + 1] || circles[0];
+  x += (nextCircle.x - x) * 0.3;
+  y += (nextCircle.y - y) * 0.6;
+});
+
+requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+      
+      
+      // cursor ends
+   </script>
+  <script src="app.js"> </script>
+  <script>
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.querySelector('body');
 if (darkModeToggle) {
